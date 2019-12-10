@@ -5,13 +5,13 @@ def test_create_passenger(self):
     assert passenger.name == 'Joana Thomson'
     assert passenger.passportnumber == 'B343123'
 
-# def create_plane(self):
-#     plane = Plane()
-#     assert plane.planenumber
-#
-# def create_flight(self):
-#     flight = Flight()
-#     assert flight.plane
-#     assert flight.destination
-#     assert flight.origin
-#     assert flight.passengerlist
+def test_create_plane(self):
+    plane = Plane('1024')
+    assert plane.planenumber == '1024'
+
+def test_create_flight(self):
+    flight = Flight('1024', 'US', 'UK')
+    assert flight.plane == '1024'
+    assert flight.destination == 'US'
+    assert flight.origin == 'UK'
+    assert flight.passengerlist
