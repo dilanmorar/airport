@@ -1,10 +1,17 @@
 from airport_run import *
 
+flight1 = Flight('Flight 1', 'New York', 'London')
+flight2 = Flight('Flight 2', 'Barcelona', 'Glasgow')
+flight3 = Flight('Flight 3', 'Amsterdam', 'Budapest')
+flights = []
+flights.extend([flight1, flight2, flight3])
+passengerlist = []
+
 while True:
     print('Choose option: ')
     print('1. create a passenger')
-    print('2. choose a plane')
-    print('3. choose a flight')
+    print('2. choose a flight')
+    print('3. add passenger to flight')
     user_choice = input('Choose one of the options above: ')
 
     if user_choice == '1':
@@ -14,28 +21,27 @@ while True:
         break
 
     elif user_choice == '2':
-        user_plane_choice = input('Name of plane: ')
-        create_plane(user_plane_choice)
-        break
+        number_of_flights = len(flights)
+        count = 0
+        print('List of flights: ')
+        while count<=number_of_flights:
+            print(flights[count].planenumber + ':' + ' from ' + flights[count].origin + ' to ' + flights[count].destination)
+            count+=1
+        else:
+            break
 
     elif user_choice == '3':
-        user_plane = input('Name of plane: ')
-        user_destination = input('Destination: ')
-        user_origin = input('Origin: ')
-        create_flight(user_plane, user_destination, user_origin, passengerlist)
+        chosen_passenger = input('What passenger: ')
+        chosen_flight = input('What flight: ')
+        if chosen_flight == 'Flight 1':
+            flight1.add_passenger(chosen_passenger)
+        elif chosen_flight == 'Flight 2':
+            flight2.add_passenger(chosen_passenger)
+        elif chosen_flight == 'Flight 3':
+            flight3.add_passenger(chosen_passenger)
+        else:
+            print('Flight does not exist')
+            break
         break
-
-    elif user_choice == '4':
-
-        break
-
-    elif user_choice == '5':
-
-        break
-
-    elif user_choice == '6':
-
-        break
-
     else:
         break

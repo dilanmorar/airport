@@ -21,4 +21,9 @@ class Flight():
     def add_origin(self, origin):
         self.origin = origin
 
+flight1 = Flight('Flight 1', 'New York', 'London')
+flight2 = Flight('Flight 2', 'Barcelona', 'Glasgow')
+flight3 = Flight('Flight 3', 'Amsterdam', 'Budapest')
+flights = []
+flights.extend([flight1, flight2, flight3])
 passengerlist = []
