@@ -12,15 +12,16 @@ def create_plane(planenumber):
     return plane.planenumber
 
 def create_flight(plane, destination, origin, passengerlist):
-    flight = Flight(plane, destination, origin)
+    flight = Flight(plane, destination, origin, passengerlist)
     return flight.plane
     return flight.destination
     return flight.origin
+    return flight.passengerlist
 
 def flight_limited_info():
     Flight()
 
-def add_plane(self, plane): 
+def add_plane(self, plane):
     self.plane = plane
 
 def add_destination(self, destination):
