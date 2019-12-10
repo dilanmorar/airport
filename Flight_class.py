@@ -12,4 +12,13 @@ class Flight():
         passenger_name = self
         passenger_name.passengerlist.append(passenger)
 
+    def add_plane(self, plane):
+        self.plane = plane
+
+    def add_destination(self, destination):
+        self.destination = destination
+
+    def add_origin(self, origin):
+        self.origin = origin
+
 passengerlist = []

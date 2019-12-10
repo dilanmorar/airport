@@ -28,13 +28,12 @@ def test_flight_limited_info():
 
 def test_add_plane():
     test_flight = Flight()
-    test_plane = Plane('1024')
-    test_flight.add_plane(test_plane.planenumber)
+    test_flight.add_plane('1024')
     assert test_flight.plane == '1024'
 
 def test_add_destination():
     test_flight = Flight()
-    test_flight.add_passenger('US')
+    test_flight.add_destination('US')
     assert test_flight.destination == 'US'
 
 def test_add_origin():

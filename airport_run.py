@@ -18,7 +18,7 @@ def create_flight(plane, destination, origin, passengerlist):
     return flight.origin
 
 def flight_limited_info():
-    pass
+    Flight()
 
 def add_plane(self, plane):
     self.plane = plane
@@ -30,6 +30,4 @@ def add_origin(self, origin):
     self.origin = origin
 
 def add_passenger(self, added_passenger):
-    test_flight = Flight(plane, destination, origin, passengerlist)
-    passenger_name = self
-    passenger_name.passengerlist.append(added_passenger)
+    self.passengerlist.append(added_passenger)
